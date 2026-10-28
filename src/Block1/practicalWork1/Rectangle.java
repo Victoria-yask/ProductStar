@@ -18,14 +18,13 @@ public class Rectangle {
     public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите длину прямоугольника: ");
+        System.out.print("Введите длину прямоугольника: ");
         double length = scanner.nextDouble();
 
-        System.out.println("Введите ширину прямоугольника: ");
+        System.out.print("Введите ширину прямоугольника: ");
         double width = scanner.nextDouble();
 
         Rectangle rect = new Rectangle(length, width);
-        System.out.println("Площадь прямоугольника: " + rect.areaRectangle());
+        System.out.print("Площадь прямоугольника: " + rect.areaRectangle());
     }
-
 }
