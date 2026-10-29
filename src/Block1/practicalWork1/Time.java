@@ -1,5 +1,4 @@
 package Block1.practicalWork1;
-
 import java.util.Scanner;
 
 public class Time {
@@ -27,7 +26,6 @@ public class Time {
 
         Time time = new Time(minutes);
         System.out.print("Это равно: " + time.convertingHours() + " часов " + time.convertingMinutes() + " минут");
-
 
     }
 }
