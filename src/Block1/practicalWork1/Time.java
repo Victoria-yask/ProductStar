@@ -1,5 +1,10 @@
 package Block1.practicalWork1;
 import java.util.Scanner;
+/*
+1. Запрашивает у пользователя количество минут.
+2. Переводит это число в часы и минуты.
+3. Выводит результат в формате: x часов y минут.
+ */
 
 public class Time {
     private int minutes;

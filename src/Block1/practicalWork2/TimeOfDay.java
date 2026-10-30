@@ -1,5 +1,9 @@
 package Block1.practicalWork2;
 import java.util.Scanner;
+/*
+принимает на вход час в формате 24-часового времени (целое число от 0 до 23)
+выводит сообщение о времени суток: «утро», «день», «вечер» или «ночь».
+ */
 
 public class TimeOfDay {
     int hour;

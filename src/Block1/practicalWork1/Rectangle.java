@@ -1,5 +1,10 @@
 package Block1.practicalWork1;
 import java.util.Scanner;
+/*
+Запрашивает у пользователя длину и ширину прямоугольника.
+Вычисляет площадь прямоугольника.
+*/
+
 
 public class Rectangle {
     private double length;

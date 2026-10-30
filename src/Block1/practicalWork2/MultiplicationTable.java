@@ -1,5 +1,8 @@
 package Block1.practicalWork2;
 import java.util.Scanner;
+/*
+выводит таблицу умножения для заданного числа n (1 <= n <= 9).
+ */
 
 public class MultiplicationTable {
     int numder;

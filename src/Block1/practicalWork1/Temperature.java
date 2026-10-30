@@ -1,5 +1,9 @@
 package Block1.practicalWork1;
 import java.util.Scanner;
+/*
+1. Запрашивает у пользователя температуру в градусах Цельсия.
+2. Конвертирует ее в градусы Фаренгейта по формуле.
+ */
 public class Temperature {
 
     private double temperatureCelsius;
