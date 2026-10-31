@@ -22,11 +22,11 @@ public class GuessNumber {
             counter++;
 
             if (number > numRandom) {
-                System.out.println("число больше загадонного числа");
+                System.out.println("число больше загадвнного числа");
             } else if (number < numRandom) {
-                System.out.println("число меньше загадонного числа");
+                System.out.println("число меньше загадвнного числа");
             } else {
-                System.out.println("Вы угадали! загадонное число " + numRandom);
+                System.out.println("Вы угадали! загаданное число " + numRandom);
                 System.out.println("Количество попыток: " + counter);
             }
         }
