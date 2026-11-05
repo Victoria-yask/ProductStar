@@ -70,7 +70,7 @@ public class HTMLValidator {
               """;
 
         HTMLValidator htmlValidator = new HTMLValidator();
-        htmlValidator.checkTags(htmlString);
+        htmlValidator.checkTags(htmlString2);
     }
 
 }
