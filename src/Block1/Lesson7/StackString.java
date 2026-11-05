@@ -9,6 +9,7 @@ public class StackString {
         size = 0;
     }
 
+    //добавить
     public void push(String value){
         if (size >= array.length){
             throw new RuntimeException("Stack is full");
@@ -17,6 +18,7 @@ public class StackString {
         size++;
     }
 
+    //удалить
     public String pop(){
         if (size == 0){
             throw new RuntimeException("Stack is empty!");
@@ -26,6 +28,7 @@ public class StackString {
         return result;
     }
 
+    //посмотреть на верхний элемент стека
     public String peek(){
         if (size == 0){
             throw new RuntimeException("Stack is empty!");
