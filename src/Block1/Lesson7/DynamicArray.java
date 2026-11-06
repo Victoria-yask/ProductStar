@@ -1,11 +1,8 @@
 package Block1.Lesson7;
 
-import java.util.Arrays;
-
 public class DynamicArray {
     private int[] array;
     private int size;
-
 
     public DynamicArray() {
         array = new int[2];

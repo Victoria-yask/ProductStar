@@ -1,7 +1,7 @@
 package Block1.Lesson5;
 
 import java.util.Scanner;
-
+//выводит четные, укзанное кол-во раз
 public class SkipMultiplesOfThree {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
