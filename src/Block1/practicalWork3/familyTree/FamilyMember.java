@@ -62,23 +62,40 @@ public class FamilyMember {
 
     // поиск узла
     public FamilyMember findNode(String name) {
+        return findNode(name, null); //
+    }
+
+    // рекурсивный метод
+    private FamilyMember findNode(String name, FamilyMember caller) {
         if (this.name.equals(name)) {
             return this;
         }
+
+        // Ищем внищ (среди детей)
         for (FamilyMember child : children) {
-            FamilyMember result = child.findNode(name);
-            if (result != null) return result;
+            if (child != caller) {
+                FamilyMember result = child.findNode(name, this);
+                if (result != null) return result;
+            }
         }
+
+        // Ищем вверх (среди родителей)
+        for (FamilyMember parent : parents) {
+            if (parent != caller) {
+                FamilyMember result = parent.findNode(name, this);
+                if (result != null) return result;
+            }
+        }
+
         return null;
     }
-
 
 
     public static void main(String[] args) {
         /*
  [Иван (Отец)] ─ [Мария (Мать)]
              │
-  [Петр (Сын)] ─ [Лиза (жена)]
+  [Петр (Сын)] ─ [Лиза]
              │
      [Олег (Внук)]
          */
@@ -95,7 +112,7 @@ public class FamilyMember {
         tree.printTree();
 
         System.out.println("\n--- Поиск родственников ---");
-        tree.findRelatives("Петр");
+        tree.findRelatives("Олег");
     }
 }
 

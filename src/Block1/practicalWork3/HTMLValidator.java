@@ -44,6 +44,12 @@ public class HTMLValidator {
                 }
             }
         }
+
+            // если в стеке остались теги, значит их не закрыли
+            if (!openingTags.isEmpty()) {
+            hasErrors = true;
+            }
+
             if (!hasErrors) {
                 System.out.println("HTML валиден!");
                 return true;
@@ -69,8 +75,14 @@ public class HTMLValidator {
                 <p><div></p></div>
               """;
 
+        //с ошибками
+        String htmlString3 = """
+              <div><p>Текст</p></div>
+                <div>Текст
+              """;
+
         HTMLValidator htmlValidator = new HTMLValidator();
-        htmlValidator.checkTags(htmlString2);
+        htmlValidator.checkTags(htmlString3);
     }
 
 }

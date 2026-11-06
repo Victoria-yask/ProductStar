@@ -43,5 +43,18 @@ public class FamilyTree {
             }
         }
         System.out.println();
+
+        System.out.print("Внуки: ");
+        boolean hasGrandchildren = false;
+        for (FamilyMember c : result.getChildren()) {
+            for (FamilyMember grandchild : c.getChildren()) {
+                System.out.print(grandchild.getName() + " ");
+                hasGrandchildren = true;
+            }
+        }
+        if (!hasGrandchildren) System.out.print("нет");
+        System.out.println();
+
+
     }
 }
