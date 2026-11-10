@@ -1,6 +1,14 @@
 package Block1.practicalWork3.familyTree;
 import java.util.ArrayList;
 import java.util.List;
+/*
+Создайте класс FamilyMember для представления члена семьи в генеалогическом дереве.
+Реализуйте методы:
+addChild(String name) — добавление ребенка;
+addParent(String name) — добавление родителя;
+findRelatives(String name) — поиск всех родственников;
+printTree() — вывод дерева.
+ */
 
 public class FamilyMember {
     private String name;

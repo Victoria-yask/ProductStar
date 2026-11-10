@@ -1,6 +1,10 @@
 package Block1.practicalWork3;
 import java.util.ArrayDeque;
 import java.util.Deque;
+/*
+Напишите программу HTMLValidator, которая проверяет правильность вложенности HTML-тегов в строке.
+Программа должна проверять, что каждый открывающий тег имеет соответствующий закрывающий тег.
+ */
 
 public class HTMLValidator {
 

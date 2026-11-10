@@ -1,5 +1,12 @@
 package Block1.practicalWork3;
 import java.util.Random;
+/*
+Создайте класс MusicPlaylist, реализующий динамический массив для управления списком песен. Реализуйте методы:
+addSong(String title) — добавление песни в конец плейлиста;
+removeSong(int index) — удаление песни по индексу;
+moveSong(int from, int to) — перемещение песни с одной позиции на другую;
+shuffle() —  случайное перемешивание песен.
+ */
 
 public class MusicPlaylist {
     private String[] array;
