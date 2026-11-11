@@ -1,4 +1,4 @@
-package Block2.lesson1;
+package Block2.Lesson1;
 
 public class Student extends Person {
     @Override

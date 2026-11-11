@@ -1,7 +1,7 @@
-package Block2.lesson1;
+package Block2.Lesson1;
 
 public class Main {
-    static void main(String[] args) {
+   public static void main(String[] args) {
 
         Student student = new Student();
         student.age = 18;
