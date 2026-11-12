@@ -25,13 +25,11 @@ public abstract class SmartDevice {
 
     public final void turnOn(){
         isOn = true;
-        SmartHome.HomeStats.incrementActiveDevices();
         System.out.println("Включен " + name);
     }
 
     public final void turnOff(){
         isOn = false;
-        SmartHome.HomeStats.decrementActiveDevices();
         System.out.println("Выключен " + name);
     }
 

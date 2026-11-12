@@ -41,13 +41,9 @@ public class CoffeeShop {
     }
 
     //приготовить заказ
-    public void prepareOrder(MenuItem item) {
+    public void prepareOrder(Preparable item) {
         System.out.println("--------------------");
-        if (item instanceof Preparable preparableItem) {
-            preparableItem.prepare();
-        } else {
-            System.out.println("Готов " + item.getName());
-        }
+        item.prepare();
     }
 
     //статистика продаж

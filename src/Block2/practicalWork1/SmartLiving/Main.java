@@ -6,19 +6,28 @@ public class Main {
 
         SmartHome myHome = new SmartHome();
 
+        //создаем устройства
         SmartLight livingRoomLight = new SmartLight("Люстра", RoomType.ГОСТИНАЯ);
         SmartThermostat bedroomThermostat = new SmartThermostat("Термостат", RoomType.ВАННАЯ);
         SmartTV kitchenTV = new SmartTV("Телевизор", RoomType.КУХНЯ);
 
+        //добавляем устройства
         myHome.addDevice(livingRoomLight);
         myHome.addDevice(bedroomThermostat);
         myHome.addDevice(kitchenTV);
 
-        myHome.turnOnDevice("Люстра");
-        myHome.turnOnDevice("Телевизор");
+        //включаем устройства
+        myHome.turnOnDevice(livingRoomLight);
+        myHome.turnOnDevice(kitchenTV);
+        myHome.turnOnDevice(bedroomThermostat);
 
-        myHome.increaseValue("Люстра");
-        myHome.increaseValue("Телевизор");
+        //управляем устройствами
+        myHome.increaseValue(livingRoomLight);
+        myHome.increaseValue(kitchenTV);
+        myHome.decreaseValue(livingRoomLight);
+
+        //выключаем устройства
+        myHome.turnOffDevice(kitchenTV);
 
         myHome.printAllStatuses();
 

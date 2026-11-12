@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SmartHome {
-    private List<SmartDevice> devices;
-
-    public SmartHome() {
-        this.devices = new ArrayList<>();
-    }
+    private List<SmartDevice> devices = new ArrayList<>();;
 
     //добавить устройство в систему
     public void addDevice(SmartDevice device) {
@@ -16,46 +12,28 @@ public class SmartHome {
         HomeStats.incrementTotalDevices();
     }
 
-    // Включить устройство по имени
-    public void turnOnDevice(String name) {
-        for (SmartDevice device : devices) {
-            if (device.getName().equals(name)) {
-                device.turnOn();
-                return;
-            }
-        }
+    // Включить устройство
+    public void turnOnDevice(SmartDevice device) {
+        device.turnOn();
+        SmartHome.HomeStats.incrementActiveDevices();
     }
 
-    // Выключить устройство по имени
-    public void turnOffDevice(String name) {
-        for (SmartDevice device : devices) {
-            if (device.getName().equals(name)) {
-                device.turnOff();
-                return;
-            }
-        }
+    // Выключить устройство
+    public void turnOffDevice(SmartDevice device) {
+        device.turnOff();
+        SmartHome.HomeStats.decrementActiveDevices();
     }
 
     // Управление устройством - увеличить
-    public void increaseValue(String name) {
-        for (SmartDevice device : devices) {
-            if (device.getName().equals(name) && device instanceof Controllable c)
-            {
-                c.increaseValue();
-                return;
-            }
-        }
+    public void increaseValue(Controllable device) {
+        device.increaseValue();
     }
 
     // Управление устройством - уменьшить
-    public void decreaseValue(String name) {
-        for (SmartDevice device : devices) {
-            if (device.getName().equals(name) && device instanceof Controllable c) {
-                c.decreaseValue();
-                return;
-            }
-        }
+    public void decreaseValue(Controllable device) {
+        device.decreaseValue();
     }
+
 
     // Показать статус всех устройств
     public void printAllStatuses() {

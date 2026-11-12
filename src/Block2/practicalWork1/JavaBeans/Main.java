@@ -43,7 +43,6 @@ public class Main {
         //готовим заказы
         shop.prepareOrder(latte1);
         shop.prepareOrder(tea3);
-        shop.prepareOrder(cupcake);
 
         //статистика продаж
         System.out.println(CoffeeShop.CoffeeShopStats.getStats());
