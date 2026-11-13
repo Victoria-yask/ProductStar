@@ -29,8 +29,10 @@ public class Main {
         //выключаем устройства
         myHome.turnOffDevice(kitchenTV);
 
+        //вывод статус устройств
         myHome.printAllStatuses();
 
+        //вывод статистики
         SmartHome.HomeStats.printStats();
 
     }

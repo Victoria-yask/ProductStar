@@ -13,9 +13,6 @@ public class Coffee extends MenuItem implements Preparable {
     public Size getSize() {
         return size;
     }
-    public CoffeeStrength getCoffeeStrength() {
-        return coffeeStrength;
-    }
 
     public void setCoffeeStrength(CoffeeStrength coffeeStrength) {
         this.coffeeStrength = coffeeStrength;

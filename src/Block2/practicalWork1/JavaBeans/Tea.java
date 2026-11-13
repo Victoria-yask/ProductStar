@@ -14,10 +14,6 @@ public class Tea extends MenuItem implements Preparable{
         return size;
     }
 
-    public TeaMode getTeaMode() {
-        return teaMode;
-    }
-
     public void setTeaMode(TeaMode teaMode) {
         this.teaMode = teaMode;
     }

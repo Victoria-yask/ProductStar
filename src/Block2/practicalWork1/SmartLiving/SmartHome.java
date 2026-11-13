@@ -34,7 +34,6 @@ public class SmartHome {
         device.decreaseValue();
     }
 
-
     // Показать статус всех устройств
     public void printAllStatuses() {
         System.out.println("\n--- Статусы устройств ---");
