@@ -45,8 +45,8 @@ public class Project implements Manageable {
     public void addTask(Task task) {
         tasks.add(task);
         System.out.println("--------------------");
-        System.out.println("Задача создана в проекте " + titleProject + "\n Название: " + task.getTitle() + "\n Описание: " + task.getDescription() + "\n Дата выполнения: "
-                + task.getFormattedDueDate() + "\n Статус: " + task.getStatus() + "\n Исполнитель: " + task.getAssignee());
+        System.out.println("Задача создана в проекте " + titleProject + "\n Название: " + task.getTitle() + "\n Описание: " + task.getDescription() +
+                "\n Дата выполнения: " + task.getFormattedDueDate() + "\n Статус: " + task.getStatus() + "\n Исполнитель: " + task.getAssignee());
     }
 
     //назначить задачу
