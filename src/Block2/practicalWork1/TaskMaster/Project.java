@@ -84,7 +84,7 @@ public class Project implements Manageable {
         @Override
         public int compare(Task t1, Task t2) {
 
-            //сортировка по дате (от понедельника к воскресенью)
+            //сортировка по дате
             if ("dueDate".equalsIgnoreCase(criteria)) {
                 return t1.getDueDate().compareTo(t2.getDueDate());
             }
