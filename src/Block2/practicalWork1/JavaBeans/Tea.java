@@ -9,13 +9,21 @@ public class Tea extends MenuItem implements Preparable{
         this.size = size;
     }
 
+    public TeaMode getTeaMode() {
+        return teaMode;
+    }
+
+    public void setTeaMode(TeaMode teaMode) {
+        this.teaMode = teaMode;
+    }
+
     @Override
     public Size getSize() {
         return size;
     }
 
-    public void setTeaMode(TeaMode teaMode) {
-        this.teaMode = teaMode;
+    public void setSize(Size size) {
+        this.size = size;
     }
 
     @Override

@@ -7,6 +7,10 @@ public class Pastry extends MenuItem {
         super(name, price);
     }
 
+    public PastryType getPastryType() {
+        return pastryType;
+    }
+
     public void setPastryType(PastryType pastryType) {
         this.pastryType = pastryType;
     }
