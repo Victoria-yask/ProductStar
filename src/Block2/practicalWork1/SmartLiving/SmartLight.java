@@ -12,6 +12,7 @@ public class SmartLight extends SmartDevice implements Controllable{
 
     @Override
     public void increaseValue() {
+        System.out.println("--------------------");
         if (brightness < MAX_BRIGHTNESS) {
             brightness++;
             System.out.println(name + " яркость увеличена до: " + brightness);
@@ -22,6 +23,7 @@ public class SmartLight extends SmartDevice implements Controllable{
 
     @Override
     public void decreaseValue() {
+        System.out.println("--------------------");
         if (brightness > MIN_BRIGHTNESS) {
             brightness--;
             System.out.println(name + " яркость уменьшена до: " + brightness);
@@ -31,6 +33,7 @@ public class SmartLight extends SmartDevice implements Controllable{
     }
 
     public String getStatus() {
+        System.out.println("--------------------");
         if (isOn) {
             return name + ", " + room + ", ВКЛ";
         } else {

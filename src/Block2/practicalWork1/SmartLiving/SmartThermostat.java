@@ -12,6 +12,7 @@ public class SmartThermostat extends SmartDevice implements Controllable {
 
     @Override
     public void increaseValue() {
+        System.out.println("--------------------");
         if (temperature < MAX_TEMPERATURE) {
             temperature++;
             System.out.println(name + " температура увеличена до: " + temperature);
@@ -22,6 +23,7 @@ public class SmartThermostat extends SmartDevice implements Controllable {
 
     @Override
     public void decreaseValue() {
+        System.out.println("--------------------");
         if (temperature > MIN_TEMPERATURE) {
             temperature--;
             System.out.println(name + " температура уменьшена до: " + temperature);
