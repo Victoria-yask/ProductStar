@@ -24,15 +24,11 @@ public abstract class SmartDevice {
     }
 
     public final void turnOn(){
-        System.out.println("--------------------");
         isOn = true;
-        System.out.println("Включен " + name);
     }
 
     public final void turnOff(){
-        System.out.println("--------------------");
         isOn = false;
-        System.out.println("Выключен " + name);
     }
 
     public abstract String getStatus();

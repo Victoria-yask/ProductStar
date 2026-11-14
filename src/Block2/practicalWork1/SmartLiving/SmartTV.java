@@ -12,7 +12,6 @@ public class SmartTV extends SmartDevice implements Controllable{
 
     @Override
     public void increaseValue() {
-        System.out.println("--------------------");
         if (channel < MAX_CHANNEL) {
         channel++;
         System.out.println(name + " канал переключен на " + channel);
@@ -23,7 +22,6 @@ public class SmartTV extends SmartDevice implements Controllable{
 
     @Override
     public void decreaseValue() {
-        System.out.println("--------------------");
         if (channel > 1) {
             channel--;
             System.out.println(name + " канал переключен на " + channel);
@@ -34,7 +32,6 @@ public class SmartTV extends SmartDevice implements Controllable{
 
     @Override
     public String getStatus() {
-        System.out.println("--------------------");
         if (isOn) {
             return name + ", " + room + ", ВКЛ";
         } else {

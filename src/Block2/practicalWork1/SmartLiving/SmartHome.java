@@ -14,23 +14,29 @@ public class SmartHome {
 
     // Включить устройство
     public void turnOnDevice(SmartDevice device) {
+        System.out.println("--------------------");
         device.turnOn();
-        SmartHome.HomeStats.incrementActiveDevices();
+        System.out.println(device.getStatus());
+        HomeStats.incrementActiveDevices();
     }
 
     // Выключить устройство
     public void turnOffDevice(SmartDevice device) {
+        System.out.println("--------------------");
         device.turnOff();
-        SmartHome.HomeStats.decrementActiveDevices();
+        System.out.println(device.getStatus());
+        HomeStats.decrementActiveDevices();
     }
 
     // Управление устройством - увеличить
     public void increaseValue(Controllable device) {
+        System.out.println("--------------------");
         device.increaseValue();
     }
 
     // Управление устройством - уменьшить
     public void decreaseValue(Controllable device) {
+        System.out.println("--------------------");
         device.decreaseValue();
     }
 
