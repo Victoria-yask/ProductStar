@@ -25,19 +25,75 @@ public class CoffeeShop {
         private MenuItem item;
         private Size size;
 
-        public Order(MenuItem item) {
-            this.item = item;
-            this.size = item.getSize();
+        // Дополнительные параметры конкретного заказа
+        private CoffeeStrength coffeeStrength;
+        private TeaMode teaMode;
+        private PastryType pastryType;
+
+        // Конструктор для Кофе
+        public Order(Coffee coffee, CoffeeStrength strength) {
+            this.item = coffee;
+            this.size = coffee.getSize();
+            this.coffeeStrength = strength;
+        }
+
+        // Конструктор для Чая
+        public Order(Tea tea, TeaMode mode) {
+            this.item = tea;
+            this.size = tea.getSize();
+            this.teaMode = mode;
+        }
+
+        // Конструктор для Выпечки
+        public Order(Pastry pastry, PastryType type) {
+            this.item = pastry;
+            this.pastryType = type;
+        }
+
+        // Метод для красивого вывода чека
+        public String getDescriptionOrder() {
+            String desc = item.getName() + " цена: " + item.getPrice();
+
+            if (size != null) {
+                desc += " размер: " + size;
+            }
+            if (coffeeStrength != null) {
+                desc += " крепость: " + coffeeStrength;
+            }
+            if (teaMode != null) {
+                desc += " режим: " + teaMode;
+            }
+            if (pastryType != null) {
+                desc += " тип: " + pastryType;
+            }
+
+            return desc;
         }
     }
 
     //оформить заказ
-    public void makeOrder(MenuItem item) {
-        Order order = new Order(item);
+    public void makeOrder(Coffee coffee, CoffeeStrength strength) {
+        Order order = new Order(coffee, strength);
         orders.add(order);
         System.out.println("--------------------");
-        System.out.println("Заказ: " + item.getDescriptionOrder());
-        CoffeeShopStats.addOrder(item.getPrice());
+        System.out.println("Заказ: " + order.getDescriptionOrder());
+        CoffeeShopStats.addOrder(coffee.getPrice());
+    }
+
+    public void makeOrder(Tea tea, TeaMode mode) {
+        Order order = new Order(tea, mode);
+        orders.add(order);
+        System.out.println("--------------------");
+        System.out.println("Заказ: " + order.getDescriptionOrder());
+        CoffeeShopStats.addOrder(tea.getPrice());
+    }
+
+    public void makeOrder(Pastry pastry, PastryType type) {
+        Order order = new Order(pastry, type);
+        orders.add(order);
+        System.out.println("--------------------");
+        System.out.println("Заказ: " + order.getDescriptionOrder());
+        CoffeeShopStats.addOrder(pastry.getPrice());
     }
 
     //приготовить заказ

@@ -17,7 +17,6 @@ public abstract class MenuItem {
     }
 
     public abstract String getDescriptionMenu();
-    public abstract String getDescriptionOrder();
 
     public Size getSize() {
         return null;

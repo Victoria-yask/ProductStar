@@ -31,14 +31,9 @@ public class Main {
         shop.printMenu();
 
         //оформляем заказы
-        latte1.setCoffeeStrength(CoffeeStrength.STRONG);
-        shop.makeOrder(latte1);
-
-        tea3.setTeaMode(TeaMode.HOT);
-        shop.makeOrder(tea3);
-
-        cupcake.setPastryType(PastryType.WITHOUTSUGAR);
-        shop.makeOrder(cupcake);
+        shop.makeOrder(latte1, CoffeeStrength.STRONG);
+        shop.makeOrder(tea3,TeaMode.HOT);
+        shop.makeOrder(cupcake, PastryType.WITHOUTSUGAR);
 
         //готовим заказы
         shop.prepareOrder(latte1);
