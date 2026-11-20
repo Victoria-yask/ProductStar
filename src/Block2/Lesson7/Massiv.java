@@ -4,15 +4,21 @@ public class Massiv {
 
     public static void main(String[] args) {
 
-
         //объявление и инициализация массива
-        int[] numbers = new int[5];
-        String[] words = {"Hello", "word"};
+        //нельзя менять размер массива
+        //все элементы должны быть одного типа
+        int[] numbers = new int[5];//по умолчанию элементы 0
+        String[] words = new String[3];//по умолчанию элементы null
+        words[0] = "world";
+        //массив words хранит ссылки на строки "world"
 
         //получение и изменение элемента массива
         int[] numbers1 = {1, 2, 3, 4, 5};
         int firstNumber = numbers1[0];
-        numbers1[1] = 10;
+        int lastNumber = numbers1[numbers1.length - 1 ];//последний элемент
+        //ошибка ArrayIndexOutOfBoundsException (Обращение к индексу вне массива)
+
+        numbers1[1] = 10;//изменить
 
         //получение длины массива
         int lenght = numbers1.length;

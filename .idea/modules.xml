@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ProductStar.iml" filepath="$PROJECT_DIR$/ProductStar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/custom-arraylist.iml" filepath="$PROJECT_DIR$/custom-arraylist.iml" />
     </modules>
   </component>
 </project>
