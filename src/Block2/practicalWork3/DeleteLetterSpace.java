@@ -15,7 +15,7 @@ public class DeleteLetterSpace {
         System.out.println(deleteLetterSpace(text));
     }
 
-    //удаление всех букв, двоеточие и пробелов
+    //удаление всех букв, пробелов и знаков
     public static String deleteLetterSpace(String text){
 
         // регулярное выражение
@@ -28,7 +28,7 @@ public class DeleteLetterSpace {
         Pattern patternText = Pattern.compile(regex);
         Matcher matcherText  = patternText.matcher(text);
 
-        //удаление букв и пробелов
+        //удаление букв, пробелов, знаков
         return matcherText.replaceAll("");
     }
 
