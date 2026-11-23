@@ -48,6 +48,5 @@ public class Stream {
                 .map(n-> n*2)
                 .toArray();
         System.out.println(Arrays.toString(doubleNumbers));
-
     }
 }
