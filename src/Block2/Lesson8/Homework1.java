@@ -13,26 +13,25 @@ public class Homework1 {
         String input = scanner.nextLine();
 
         //Вывод результата
-        System.out.println("Количество букв: " + countLetters(input));
+        count(input);
     }
 
 
     //Метод для подсчета количества букв в строке
-    public static int countLetters(String str) {
-        // Регулярное выражение для поиска букв (кириллица и латиница)
-        String regex = "[a-zA-Zа-яА-Я]";
+    public static void count(String str) {
+        Pattern letters = Pattern.compile("[a-zA-Zа-яА-Я]");
+        Pattern digits = Pattern.compile("\\d");
 
-        // Компиляция регулярного выражения
-        Pattern pattern = Pattern.compile(regex);
+        Matcher mLetters = letters.matcher(str);
+        Matcher mDigits = digits.matcher(str);
 
-        // Создание объекта Matcher для поиска совпадений в строке
-        Matcher matcher = pattern.matcher(str);
-        int count = 0;
+        int letterCount = 0;
+        int digitCount = 0;
 
-        // Находим все совпадения и увеличиваем счетчик
-        while (matcher.find()) {
-            count++;
-        }
-        return count;
+        while (mLetters.find()) letterCount++;
+        while (mDigits.find()) digitCount++;
+
+        System.out.println("Букв: " + letterCount);
+        System.out.println("Цифр: " + digitCount);
     }
 }
