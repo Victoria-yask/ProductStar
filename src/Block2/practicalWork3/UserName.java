@@ -22,6 +22,8 @@ public class UserName {
                 System.out.println("Ошибка: имя пользователя должно содержать от 3 до 20 символов");
             } else if (!Character.isLetter(userName.charAt(0))) {
                 System.out.println("Ошибка: имя пользователя должно начинаться с буквы");
+            } else if (containsCyrillic(userName)) {
+                System.out.println("Ошибка: имя пользователя должно содержать только латинские буквы");
             }
         }
     }
@@ -47,4 +49,12 @@ public class UserName {
         return underline;
     }
 
+    // проверка на наличие кириллицы
+    public static boolean containsCyrillic(String text) {
+        Pattern cyrillicPattern = Pattern.compile("[а-яА-Я]");
+        Matcher matcher = cyrillicPattern.matcher(text);
+        return matcher.find();
+    }
 }
+
+
