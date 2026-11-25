@@ -1,4 +1,4 @@
-package Block3;
+package Block3.Lesson1;
 
 public class BubbleSort {
 
