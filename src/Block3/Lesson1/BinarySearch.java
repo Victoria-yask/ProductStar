@@ -1,4 +1,4 @@
-package Block3;
+package Block3.Lesson1;
 
 import java.util.Arrays;
 import java.util.Random;
